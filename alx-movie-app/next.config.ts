@@ -9,25 +9,20 @@ const withPWA = withPWAInit({
 const nextConfig = {
   reactStrictMode: true,
 
-
   images: {
-
-    domains: ['m.media-amazon.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'm.media-amazon.com',
+  
         port: '',
         pathname: '/images/**',
       },
     ],
   },
+  
 
-  experimental: {
-    appDir: false,
-  },
 };
-
 
 export default withPWA({
   ...nextConfig
